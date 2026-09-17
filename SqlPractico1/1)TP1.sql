@@ -46,10 +46,7 @@ ON Empleados
 AFTER INSERT, UPDATE
 AS
 BEGIN
-    IF TRIGGER_NESTLEVEL() > 1
-        RETURN;
-
-    IF UPDATE(Cargo)
+  IF UPDATE(Cargo)
     BEGIN
         UPDATE e
         SET e.Sueldo = ib.importe_basico * 1.15
