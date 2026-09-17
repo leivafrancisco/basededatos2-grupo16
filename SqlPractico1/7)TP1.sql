@@ -8,9 +8,8 @@ ON Empleados
 AFTER DELETE
 AS
 BEGIN
-    DELETE u
-    FROM Usuarios u
-    JOIN deleted d ON u.Legajo = d.Legajo;
+    DELETE FROM Usuarios
+    WHERE Legajo IN (SELECT Legajo FROM deleted);
 END;
 GO
 
