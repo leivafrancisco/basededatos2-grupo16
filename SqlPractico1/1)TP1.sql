@@ -1,5 +1,12 @@
 -- Ejercicio 1: Creación de tabla Empleados y triggers Control_sueldo y Adicional_cargo
 
+-- Se crea la tabla Importes_basicos para almacenar el importe base según el cargo.
+CREATE TABLE Importes_basicos (
+    cargo INT PRIMARY KEY,
+    importe_basico DECIMAL(10,2)
+);
+GO
+
 -- Se crea la tabla Empleados con sus respectivas restricciones: DNI positivo, legajo único, y límites para cargo y sueldo.
 CREATE TABLE Empleados (
     DNI_Empleado INT PRIMARY KEY CHECK (DNI_Empleado > 0),
