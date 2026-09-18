@@ -1,8 +1,7 @@
 -- Ejercicio 7: Modificar trigger y comandos para desactivar triggers
 
 -- Modificamos el trigger Baja_usuario para que ahora elimine por Legajo en lugar de DNI.
--- NOTA: En SQL Server el comando equivalente a "REPLACE TRIGGER" es "ALTER TRIGGER" 
--- (o "CREATE OR ALTER TRIGGER" en versiones modernas).
+-- NOTA: En SQL Server el comando equivalente a "REPLACE TRIGGER" es "ALTER TRIGGER".
 ALTER TRIGGER Baja_usuario
 ON Empleados
 AFTER DELETE
